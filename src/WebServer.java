@@ -6,13 +6,14 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class WebServer {
-private void readRequest(Socket socket){
-    BufferedReader input;
+private void readRequest(Socket socket){ 
     try {
+        BufferedReader input;
         input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         String response = "";
-        while((response = input.readLine()).isEmpty() == false)
-        System.out.println(response);
+        while((response = input.readLine()).isEmpty() == false){
+            System.out.println(response);
+        }
     }catch(Exception e){
         System.err.println(e.getMessage());
     }
