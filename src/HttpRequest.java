@@ -18,7 +18,9 @@ public class HttpRequest {
             System.err.println(e.getMessage());
         }
     }
-    public HttpRequest(Socket socket){}
+    public HttpRequest(Socket socket){
+        readClientRequest(socket);
+    }
     public String getMethod(){
         return this.method;
     }
